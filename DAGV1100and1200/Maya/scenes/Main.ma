@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Main.ma
-//Last modified: Wed, Sep 09, 2026 11:26:10 PM
+//Last modified: Wed, Sep 09, 2026 11:35:17 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -13,22 +13,22 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "1D3B3270-4538-2F79-FDA6-808056135F50";
+fileInfo "UUID" "E7431F15-4A23-02ED-18E0-9FA688D30920";
 createNode transform -s -n "persp";
 	rename -uid "9A701767-448A-54B4-8644-79B28AFC19C9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.1184863372114018 10.772431359676435 -10.809111227513416 ;
-	setAttr ".r" -type "double3" -34.199999999979703 -2724.4000000000265 0 ;
+	setAttr ".t" -type "double3" 15.0413698294557 17.802613937633922 -35.094145221766972 ;
+	setAttr ".r" -type "double3" -20.399999999999494 -2723.2000000006074 0 ;
 	setAttr ".rpt" -type "double3" 5.5912053570484919e-18 -4.7301233600043445e-17 -4.1625742251792774e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2307E926-4693-C02B-B27A-F8B250E3C02E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.571921955772144;
+	setAttr ".coi" 40.736614866151641;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.62726437812413327 3.7697728527453274 -1.3089227865044286 ;
+	setAttr ".tp" -type "double3" -1.7881393477026108e-07 3.602968692779541 3.5762786804172109e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "2860A864-499C-1EDD-E7C9-FBBA6DCA1860";
@@ -1821,7 +1821,7 @@ createNode mesh -n "ChairShape" -p "Chair";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 3 "f[3]" "f[21]" "f[23]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 4 "f[5:10]" "f[17:20]" "f[24:27]" "f[33:35]";
-	setAttr ".pv" -type "double2" 0.5 0.875 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 72 ".uvst[0].uvsp[0:71]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -2028,7 +2028,7 @@ createNode mesh -n "Chair1Shape" -p "Chair1";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 3 "f[3]" "f[21]" "f[23]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 4 "f[5:10]" "f[17:20]" "f[24:27]" "f[33:35]";
-	setAttr ".pv" -type "double2" 0.5 0.875 ;
+	setAttr ".pv" -type "double2" 0.61374935507774353 0.37469777464866638 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 72 ".uvst[0].uvsp[0:71]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -2056,10 +2056,10 @@ createNode mesh -n "Chair1Shape" -p "Chair1";
 		-1.6499997 -1.7709105 -9.3959837 1.6499997 -1.7656081 -9.3959837 -1.6499997 -1.2584407 
 		2.5000007 -1.6499997 -1.2584412 2.5000007 1.6499997 -1.5433795 2.5000007 -1.3630046 
 		-1.2584407 2.5000007 -1.3630046 1.7566199 2.5000007 -1.3630046 1.7566199 1.7000008 
-		-1.3630046 -1.2584407 1.7000008 -1.3630046 -1.7660692 -9.3959837 -1.3630046 -1.8446219 
-		-9.5237427 -1.3630046 -1.54338 1.7000008 -1.3630046 -1.2584412 2.5000007 1.355026 
-		-1.5433795 2.5000007 1.355026 -1.5433795 1.7000008 1.355026 -1.8488719 -9.5237427 
-		1.355026 -1.770436 -9.3959837 1.355026 -1.2584412 1.7000008 1.355026 1.7566199 1.7000008 
+		-1.3630046 -1.2584407 1.7000008 -1.3630046 -1.7660692 -9.3959837 -1.3630046 -1.8446224 
+		-9.5237408 -1.3630053 -1.5433806 1.7000014 -1.3630046 -1.2584412 2.5000007 1.355026 
+		-1.5433795 2.5000007 1.355026 -1.5433792 1.7000015 1.3550266 -1.8488716 -9.5237427 
+		1.3550259 -1.770436 -9.3959837 1.355026 -1.2584412 1.7000008 1.355026 1.7566199 1.7000008 
 		1.355026 1.7566199 2.5000007 1.355026 1.4499441 2.5000007 -1.3630046 1.4499441 2.5000007 
 		1.355026 1.4499441 2.5000007 1.6499997 1.4499441 1.7000008 1.6499997 1.4499441 1.7000008 
 		1.355026 1.4499441 1.7000008 -1.3630046 1.4499441 1.7000008 -1.6499997 1.4499441 
@@ -2220,6 +2220,23 @@ createNode transform -n "Book";
 createNode mesh -n "BookShape" -p "Book";
 	rename -uid "68480FA9-46BA-6C61-7217-43B6922058CD";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape13" -p "Book";
+	rename -uid "630748D2-4DCF-05BE-15C6-60A6E6FEFB80";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -2521,6 +2538,23 @@ createNode mesh -n "BookShape2" -p "Book2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape2" -p "Book2";
+	rename -uid "A0D8EA6A-4D7C-83CE-4046-1BA6F6E8565C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -2818,6 +2852,23 @@ createNode transform -n "Book3";
 createNode mesh -n "BookShape3" -p "Book3";
 	rename -uid "13A6F92C-4ECE-AF30-B1FD-6598668DDA32";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape18" -p "Book3";
+	rename -uid "B4269B49-4321-4FF9-F7EB-8CB43686B7E6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -3120,6 +3171,23 @@ createNode mesh -n "BookShape4" -p "Book4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape5" -p "Book4";
+	rename -uid "DD8B456B-4929-6003-58A4-A9AFD5F8950E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -3133,7 +3201,7 @@ createNode mesh -n "BookShape4" -p "Book4";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 15 "f[4]" "f[6:8]" "f[16:19]" "f[26:29]" "f[36]" "f[38:40]" "f[46:51]" "f[62:67]" "f[70]" "f[72]" "f[74:75]" "f[78:79]" "f[82]" "f[84]" "f[86:89]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "f[1]" "f[12:15]";
-	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 178 ".uvst[0].uvsp[0:177]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -3417,6 +3485,23 @@ createNode transform -n "Book5";
 createNode mesh -n "BookShape5" -p "Book5";
 	rename -uid "09CA5406-496A-074B-1D0F-C6A4C6695679";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape7" -p "Book5";
+	rename -uid "152C5857-4895-7353-F3FF-518A1F7781C7";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -3719,6 +3804,23 @@ createNode mesh -n "BookShape6" -p "Book6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape6" -p "Book6";
+	rename -uid "36B6591D-4BBE-FDEC-E1F2-B298A411F7BA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -4018,6 +4120,23 @@ createNode mesh -n "BookShape7" -p "Book7";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape14" -p "Book7";
+	rename -uid "6DE97DE0-4A91-5AEE-9473-759F9BAB8F7E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -4315,6 +4434,23 @@ createNode transform -n "Book8";
 createNode mesh -n "BookShape8" -p "Book8";
 	rename -uid "41940A44-4E7E-81DF-77C3-C1A35096F739";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape19" -p "Book8";
+	rename -uid "EA088AFF-4796-44F5-654C-798FE1CE5D9D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -4617,6 +4753,23 @@ createNode mesh -n "BookShape9" -p "Book9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape15" -p "Book9";
+	rename -uid "99039FEF-44B0-63C6-9A87-4EB33582617F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -4916,6 +5069,23 @@ createNode mesh -n "BookShape10" -p "Book10";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape17" -p "Book10";
+	rename -uid "F268063E-4793-E18B-BD02-6E85F73298C7";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -5213,6 +5383,23 @@ createNode transform -n "Book11";
 createNode mesh -n "BookShape11" -p "Book11";
 	rename -uid "318A13A5-481C-9DD1-3E57-7394EDDFB392";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape12" -p "Book11";
+	rename -uid "9B907023-4EBB-B10F-C6FA-47895834FC10";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -5515,6 +5702,23 @@ createNode mesh -n "BookShape12" -p "Book12";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape4" -p "Book12";
+	rename -uid "3876E4F7-43D3-F90D-74E2-8795F303A59A";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -5815,6 +6019,39 @@ createNode mesh -n "BookShape13" -p "Book13";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 21 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[1]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[2]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[3]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[4]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[5]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[6]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[7]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[8]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[9]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[10]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[11]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[12]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[13]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[14]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[15]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-09 0 ;
+createNode mesh -n "polySurfaceShape20" -p "Book13";
+	rename -uid "07525323-437A-EFEE-CA59-209B8FBFAC57";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -5857,11 +6094,27 @@ createNode mesh -n "BookShape13" -p "Book13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
-		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
-		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
-		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
-		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+	setAttr -s 21 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[1]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[2]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[3]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[4]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[5]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[6]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[7]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[8]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[9]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[10]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[11]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[12]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[13]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[14]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[15]" -type "float3" 0 7.4505806e-08 0 ;
+	setAttr ".pt[16]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[17]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[18]" -type "float3" 0 3.7252903e-09 0 ;
+	setAttr ".pt[19]" -type "float3" 0 3.7252903e-09 0 ;
 	setAttr -s 100 ".vt[0:99]"  -0.5 -0.50000089 0.5 0.5 -0.50000089 0.5
 		 -0.5 0.49999577 0.5 0.5 0.49999577 0.5 -0.5 0.49999577 -0.5 0.5 0.49999577 -0.5 -0.5 -0.50000089 -0.5
 		 0.5 -0.50000089 -0.5 0.77163398 -0.50000089 -0.5 0.77163398 -0.50000089 0.5 0.77163398 0.49999577 -0.5
@@ -6113,6 +6366,23 @@ createNode transform -n "Book14";
 createNode mesh -n "BookShape14" -p "Book14";
 	rename -uid "A06E80D0-414A-76A5-F18C-118FEEB0D421";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape3" -p "Book14";
+	rename -uid "B375F857-4062-45B1-8F50-54878AA86FF9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -6415,6 +6685,23 @@ createNode mesh -n "BookShape15" -p "Book15";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape11" -p "Book15";
+	rename -uid "CFC30823-488C-7E5F-FF9B-B4B6F33D1944";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -6715,6 +7002,23 @@ createNode mesh -n "BookShape16" -p "Book16";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape10" -p "Book16";
+	rename -uid "C7ABCE13-42B0-A89C-23C5-0AB59DE1F453";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -7013,6 +7317,23 @@ createNode transform -n "Book17";
 createNode mesh -n "BookShape17" -p "Book17";
 	rename -uid "89A094CF-4E0B-7CA8-AC81-E5B488EF7896";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape9" -p "Book17";
+	rename -uid "6AE6619A-4E73-9484-5D86-D68A83EC67E4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -7669,6 +7990,23 @@ createNode mesh -n "BookShape19" -p "Book19";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape16" -p "Book19";
+	rename -uid "EF8A032D-40DC-71AD-01D1-75991E023A55";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[24:25]" "f[34:35]" "f[44:45]";
@@ -7968,6 +8306,23 @@ createNode transform -n "Book20";
 createNode mesh -n "BookShape20" -p "Book20";
 	rename -uid "4F6710CE-4BB7-E744-B2F1-9E968B706AAA";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[0:19]" -type "float3"  0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 
+		0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 7.4505806e-08 0 0 3.7252903e-09 
+		0 0 3.7252903e-09 0 0 3.7252903e-09 0 0 3.7252903e-09 0;
+createNode mesh -n "polySurfaceShape8" -p "Book20";
+	rename -uid "F9386D20-4E38-0008-5528-75A6514B81F2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -9062,6 +9417,163 @@ createNode polyTweak -n "polyTweak5";
 	setAttr -s 2 ".tk";
 	setAttr ".tk[5]" -type "float3" 0.011079311 0 0 ;
 	setAttr ".tk[175]" -type "float3" -0.011079311 0 0 ;
+createNode polyTriangulate -n "polyTriangulate1";
+	rename -uid "90ED167D-4A06-CA67-604F-7E83D6960220";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate2";
+	rename -uid "861C0388-4039-BAC3-8CFF-FFB32F421B35";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate3";
+	rename -uid "8B6F9883-4480-EB72-872C-94A9C75CCBAE";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate4";
+	rename -uid "0939A09A-44C1-5E7F-10FE-9C95209F0459";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate5";
+	rename -uid "08D1000F-4F11-735C-22C9-398C2311DFFE";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate6";
+	rename -uid "FEE5287E-40D7-98C7-F543-D5B4D3287FB7";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate7";
+	rename -uid "D9F31193-4EC1-E426-6DA1-759ED82C0D7F";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate8";
+	rename -uid "C970CCBC-4893-8350-7DFB-8BB4A60962E9";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate9";
+	rename -uid "C4F33798-4689-EC93-0D21-829E5019EAAD";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate10";
+	rename -uid "0DA6A086-4ABD-5239-2630-1BAEC099C3CD";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate11";
+	rename -uid "92E712E4-4080-FA99-13B2-EFB6E0C18BC6";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate12";
+	rename -uid "64BAFF08-48ED-DB3B-DD3F-0E83E83B58B2";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate13";
+	rename -uid "32E76652-41E7-AD6C-2ABA-FFBB006C3B8A";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate14";
+	rename -uid "D35A3ADF-4E04-A808-5C20-BEAF34B9ECCD";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate15";
+	rename -uid "53571DA2-4D73-7DF8-412E-2A86DBDBB235";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate16";
+	rename -uid "0E75BF24-4484-38B7-D7C9-B7A8716BD41E";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate17";
+	rename -uid "C262224B-4D54-F098-2C8F-3592889DDC89";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate18";
+	rename -uid "E8EB2644-4BB1-C71A-058B-069C287BD9CF";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate19";
+	rename -uid "54F62E15-4CA2-A857-DC43-1A99D87D08C3";
+	setAttr ".ics" -type "componentList" 1 "f[82:85]";
+createNode polyTriangulate -n "polyTriangulate20";
+	rename -uid "988DB1A9-4AD9-CCA9-E85F-6F86539D8667";
+	setAttr ".ics" -type "componentList" 4 "f[17]" "f[19]" "f[21]" "f[54:55]";
+createNode polyTriangulate -n "polyTriangulate21";
+	rename -uid "4BEC3730-411B-F64F-94EC-118710F1ADF1";
+	setAttr ".ics" -type "componentList" 6 "f[12]" "f[14]" "f[17]" "f[19]" "f[21]" "f[54:55]";
+createNode polyTriangulate -n "polyTriangulate22";
+	rename -uid "F429DD22-431A-6F0D-5289-2ABBE9F93843";
+	setAttr ".ics" -type "componentList" 1 "f[54:55]";
+createNode polyTriangulate -n "polyTriangulate23";
+	rename -uid "9B667590-4311-425B-D6DD-7D9104A16A03";
+	setAttr ".ics" -type "componentList" 6 "f[13]" "f[15:16]" "f[18]" "f[20]" "f[22]" "f[54:55]";
+createNode polyTriangulate -n "polyTriangulate24";
+	rename -uid "EDE5B993-48BB-3797-F6BE-998F99744D4F";
+	setAttr ".ics" -type "componentList" 3 "f[13]" "f[16:18]" "f[54:55]";
+createNode polyMapCut -n "polyMapCut1";
+	rename -uid "FE07C028-4248-E3D8-50E2-D683A868CB64";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "1DA9871B-4A87-AC62-F1F8-2CB9690D05F3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut3";
+	rename -uid "F2FE35EB-4A61-7BE5-9BAD-23AA93AD086F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "21127C60-4B2B-1607-8069-37A19DF66078";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut5";
+	rename -uid "84FFB5E4-47BE-7909-D3CC-D29CE5865772";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut6";
+	rename -uid "E913155F-479A-AB27-F155-E5B5040CD973";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut7";
+	rename -uid "62F39798-424B-A932-D7F0-DDAB1155B9F9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut8";
+	rename -uid "FB36077F-4623-6F72-F7F5-0B9AA5BBB515";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut9";
+	rename -uid "3BDA7F99-4A3A-7789-724D-C19A9533A1C3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut10";
+	rename -uid "1D2F305C-4076-531A-5521-EE83075CAA3D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]" "e[205]";
+createNode polyMapCut -n "polyMapCut11";
+	rename -uid "1739A5B8-4CDE-8234-5DD7-CE8B4DD4B844";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut12";
+	rename -uid "C2B97571-4C85-2C9C-4770-7084DA65139A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut13";
+	rename -uid "E5C22669-4ED3-77DC-E929-9A8972D0DED5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut14";
+	rename -uid "1D6D5742-4BDF-6EFA-15C1-36983D923EF0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut15";
+	rename -uid "0B836FC6-4362-917C-60B2-C98202E2C3C1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut16";
+	rename -uid "A2D3FA86-4C2C-AE31-70CF-C599519E7DB9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut17";
+	rename -uid "FB863D71-4F6C-0523-4897-259AB331552E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut18";
+	rename -uid "DFB28C22-4BF4-42F2-77BC-0593B4A7929A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyMapCut -n "polyMapCut19";
+	rename -uid "0D5D8F16-4B66-77B4-2902-63BFA5AEA728";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 8 "e[0:1]" "e[4:6]" "e[8:9]" "e[21]" "e[37]" "e[81]" "e[89]" "e[106]";
+createNode polyTriangulate -n "polyTriangulate25";
+	rename -uid "143EE533-427D-D9AA-DF8D-C58EF93D6EF1";
+	setAttr ".ics" -type "componentList" 1 "f[54:55]";
+createNode polyTriangulate -n "polyTriangulate26";
+	rename -uid "ADFFC1CE-443C-D387-CCA9-2AB88785AC71";
+	setAttr ".ics" -type "componentList" 4 "f[14:15]" "f[20]" "f[22]" "f[55]";
+createNode polyTriangulate -n "polyTriangulate27";
+	rename -uid "B5C0F163-458B-9A91-02CB-96AAF53C76A7";
+	setAttr ".ics" -type "componentList" 2 "f[16]" "f[24]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -9120,6 +9632,23 @@ connectAttr "groupId2.id" "WallShape1.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "WallShape1.iog.og[1].gco";
 connectAttr "WallLayer.di" "Wall2.do";
 connectAttr "polyMergeVert6.out" "BookshelfShape.i";
+connectAttr "polyMapCut12.out" "BookShape.i";
+connectAttr "polyMapCut1.out" "BookShape2.i";
+connectAttr "polyMapCut17.out" "BookShape3.i";
+connectAttr "polyMapCut4.out" "BookShape4.i";
+connectAttr "polyMapCut6.out" "BookShape5.i";
+connectAttr "polyMapCut5.out" "BookShape6.i";
+connectAttr "polyMapCut13.out" "BookShape7.i";
+connectAttr "polyMapCut18.out" "BookShape8.i";
+connectAttr "polyMapCut14.out" "BookShape9.i";
+connectAttr "polyMapCut16.out" "BookShape10.i";
+connectAttr "polyMapCut11.out" "BookShape11.i";
+connectAttr "polyMapCut3.out" "BookShape12.i";
+connectAttr "polyMapCut19.out" "BookShape13.i";
+connectAttr "polyTriangulate25.out" "BookShape14.i";
+connectAttr "polyMapCut10.out" "BookShape15.i";
+connectAttr "polyMapCut9.out" "BookShape16.i";
+connectAttr "polyMapCut8.out" "BookShape17.i";
 connectAttr "pCube24_rotateX.o" "Book19.rx";
 connectAttr "pCube24_rotateY.o" "Book19.ry";
 connectAttr "pCube24_rotateZ.o" "Book19.rz";
@@ -9130,6 +9659,7 @@ connectAttr "pCube24_visibility.o" "Book19.v";
 connectAttr "pCube24_translateX.o" "Book19.tx";
 connectAttr "pCube24_translateY.o" "Book19.ty";
 connectAttr "pCube24_translateZ.o" "Book19.tz";
+connectAttr "polyTriangulate27.out" "BookShape19.i";
 connectAttr "pCube25_rotateX.o" "Book20.rx";
 connectAttr "pCube25_rotateY.o" "Book20.ry";
 connectAttr "pCube25_rotateZ.o" "Book20.rz";
@@ -9140,6 +9670,7 @@ connectAttr "pCube25_visibility.o" "Book20.v";
 connectAttr "pCube25_translateX.o" "Book20.tx";
 connectAttr "pCube25_translateY.o" "Book20.ty";
 connectAttr "pCube25_translateZ.o" "Book20.tz";
+connectAttr "polyTriangulate26.out" "BookShape20.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -9165,6 +9696,52 @@ connectAttr "polyMergeVert4.out" "polyTweak4.ip";
 connectAttr "polyTweak5.out" "polyMergeVert6.ip";
 connectAttr "BookshelfShape.wm" "polyMergeVert6.mp";
 connectAttr "polyMergeVert5.out" "polyTweak5.ip";
+connectAttr "polySurfaceShape2.o" "polyTriangulate1.ip";
+connectAttr "polySurfaceShape3.o" "polyTriangulate2.ip";
+connectAttr "polySurfaceShape4.o" "polyTriangulate3.ip";
+connectAttr "polySurfaceShape5.o" "polyTriangulate4.ip";
+connectAttr "polySurfaceShape6.o" "polyTriangulate5.ip";
+connectAttr "polySurfaceShape7.o" "polyTriangulate6.ip";
+connectAttr "polySurfaceShape8.o" "polyTriangulate7.ip";
+connectAttr "polySurfaceShape9.o" "polyTriangulate8.ip";
+connectAttr "polySurfaceShape10.o" "polyTriangulate9.ip";
+connectAttr "polySurfaceShape11.o" "polyTriangulate10.ip";
+connectAttr "polySurfaceShape12.o" "polyTriangulate11.ip";
+connectAttr "polySurfaceShape13.o" "polyTriangulate12.ip";
+connectAttr "polySurfaceShape14.o" "polyTriangulate13.ip";
+connectAttr "polySurfaceShape15.o" "polyTriangulate14.ip";
+connectAttr "polySurfaceShape16.o" "polyTriangulate15.ip";
+connectAttr "polySurfaceShape17.o" "polyTriangulate16.ip";
+connectAttr "polySurfaceShape18.o" "polyTriangulate17.ip";
+connectAttr "polySurfaceShape19.o" "polyTriangulate18.ip";
+connectAttr "polySurfaceShape20.o" "polyTriangulate19.ip";
+connectAttr "polyTriangulate4.out" "polyTriangulate20.ip";
+connectAttr "polyTriangulate8.out" "polyTriangulate21.ip";
+connectAttr "polyTriangulate9.out" "polyTriangulate22.ip";
+connectAttr "polyTriangulate10.out" "polyTriangulate23.ip";
+connectAttr "polyTriangulate15.out" "polyTriangulate24.ip";
+connectAttr "polyTriangulate1.out" "polyMapCut1.ip";
+connectAttr "polyTriangulate2.out" "polyMapCut2.ip";
+connectAttr "polyTriangulate3.out" "polyMapCut3.ip";
+connectAttr "polyTriangulate20.out" "polyMapCut4.ip";
+connectAttr "polyTriangulate5.out" "polyMapCut5.ip";
+connectAttr "polyTriangulate6.out" "polyMapCut6.ip";
+connectAttr "polyTriangulate7.out" "polyMapCut7.ip";
+connectAttr "polyTriangulate21.out" "polyMapCut8.ip";
+connectAttr "polyTriangulate22.out" "polyMapCut9.ip";
+connectAttr "polyTriangulate23.out" "polyMapCut10.ip";
+connectAttr "polyTriangulate11.out" "polyMapCut11.ip";
+connectAttr "polyTriangulate12.out" "polyMapCut12.ip";
+connectAttr "polyTriangulate13.out" "polyMapCut13.ip";
+connectAttr "polyTriangulate14.out" "polyMapCut14.ip";
+connectAttr "polyTriangulate24.out" "polyMapCut15.ip";
+connectAttr "polyTriangulate16.out" "polyMapCut16.ip";
+connectAttr "polyTriangulate17.out" "polyMapCut17.ip";
+connectAttr "polyTriangulate18.out" "polyMapCut18.ip";
+connectAttr "polyTriangulate19.out" "polyMapCut19.ip";
+connectAttr "polyMapCut2.out" "polyTriangulate25.ip";
+connectAttr "polyMapCut7.out" "polyTriangulate26.ip";
+connectAttr "polyMapCut15.out" "polyTriangulate27.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "TableShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
