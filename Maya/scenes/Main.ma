@@ -1,7 +1,19 @@
 //Maya ASCII 2027 scene
 //Name: Main.ma
-//Last modified: Tue, Sep 15, 2026 12:03:41 PM
+//Last modified: Tue, Sep 15, 2026 12:18:14 PM
 //Codeset: 1252
+file -rdi 1 -ns "Bookshelf" -rfn "BookshelfRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Bookshelf.ma";
+file -rdi 1 -ns "Sofa" -rfn "SofaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Sofa.ma";
+file -rdi 1 -ns "Table" -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Table.ma";
+file -rdi 1 -ns "Chair" -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Chair.ma";
+file -rdi 1 -ns "Chair1" -rfn "ChairRN1" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Chair.ma";
+file -rdi 1 -ns "Book" -rfn "BookRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Book.ma";
+file -r -ns "Bookshelf" -dr 1 -rfn "BookshelfRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Bookshelf.ma";
+file -r -ns "Sofa" -dr 1 -rfn "SofaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Sofa.ma";
+file -r -ns "Table" -dr 1 -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Table.ma";
+file -r -ns "Chair" -dr 1 -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Chair.ma";
+file -r -ns "Chair1" -dr 1 -rfn "ChairRN1" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Chair.ma";
+file -r -ns "Book" -dr 1 -rfn "BookRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Book.ma";
 requires maya "2027";
 requires "stereoCamera" "10.0";
 requires "mtoa" "5.6.2";
@@ -13,22 +25,22 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "6308BBC4-494C-7CD0-3288-1F95E42D1516";
+fileInfo "UUID" "B90003EE-48F5-E73B-2C77-1688E1E0A89F";
 createNode transform -s -n "persp";
 	rename -uid "9A701767-448A-54B4-8644-79B28AFC19C9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.004366799328267 32.869145761298213 -36.237353374013111 ;
-	setAttr ".r" -type "double3" -28.199999999990002 -2745.6000000000859 0 ;
+	setAttr ".t" -type "double3" 24.741663907348354 19.606497693292155 -25.244535110182809 ;
+	setAttr ".r" -type "double3" -20.999999999983935 -3104.3999999999478 0 ;
 	setAttr ".rpt" -type "double3" 5.5912053570484919e-18 -4.7301233600043445e-17 -4.1625742251792774e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2307E926-4693-C02B-B27A-F8B250E3C02E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 58.768131021084585;
+	setAttr ".coi" 37.992908245473643;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 5.0982204973697662 -1.1143119849066352e-07 ;
+	setAttr ".tp" -type "double3" -0.074999809265136719 5.9910570681095123 0.097407504926739108 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "2860A864-499C-1EDD-E7C9-FBBA6DCA1860";
@@ -644,6 +656,63 @@ createNode groupId -n "groupId1";
 createNode groupId -n "groupId2";
 	rename -uid "809EA7B0-496D-79A8-C290-BEBA05887069";
 	setAttr ".ihi" 0;
+createNode reference -n "BookshelfRN";
+	rename -uid "C7172F6A-4167-FFAE-8573-73A7A53DB347";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookshelfRN"
+		"BookshelfRN" 0
+		"BookshelfRN" 1
+		2 "|Bookshelf:Bookshelf" "translate" " -type \"double3\" -8 0 10.59248287913888653";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "SofaRN";
+	rename -uid "1B394A70-48DF-2F20-1B2E-C9AF8C28B134";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"SofaRN"
+		"SofaRN" 0
+		"SofaRN" 2
+		2 "|Sofa:Sofa" "translate" " -type \"double3\" 5 0 9"
+		2 "|Sofa:Sofa" "rotate" " -type \"double3\" 0 89.99999999999997158 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "TableRN";
+	rename -uid "E1AEF892-40D8-5A15-3B2A-6C9C361C5214";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TableRN"
+		"TableRN" 0
+		"TableRN" 2
+		2 "|Table:Table" "translate" " -type \"double3\" -4 0 -7"
+		2 "|Table:Table" "rotate" " -type \"double3\" 0 -89.99999999999997158 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "ChairRN";
+	rename -uid "9FA5F4AF-4BB9-55FE-472B-63A3A7F04870";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"ChairRN"
+		"ChairRN" 0
+		"ChairRN" 1
+		2 "|Chair:Chair1" "translate" " -type \"double3\" -7 0 -7";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "ChairRN1";
+	rename -uid "D18C67FA-41A9-419C-96C4-3885FF5C92F6";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"ChairRN1"
+		"ChairRN1" 0
+		"ChairRN1" 2
+		2 "|Chair1:Chair1" "translate" " -type \"double3\" -4 0 -2"
+		2 "|Chair1:Chair1" "rotate" " -type \"double3\" 0 89.99999999999997158 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "BookRN";
+	rename -uid "AAEF9353-4406-8A09-05C1-E2ABAD66D4D1";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BookRN"
+		"BookRN" 0
+		"BookRN" 1
+		2 "|Book:Book18" "translate" " -type \"double3\" -5.83312552618724212 5.66849054173236766 10.59681059015828808";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -669,7 +738,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 4 ".dsm";
+	setAttr -s 10 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
