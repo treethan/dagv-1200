@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Main.ma
-//Last modified: Tue, Sep 22, 2026 03:00:16 PM
+//Last modified: Tue, Sep 22, 2026 03:17:13 PM
 //Codeset: 1252
 file -rdi 1 -ns "Bookshelf" -rfn "BookshelfRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Bookshelf.ma";
 file -rdi 1 -ns "Table" -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "C:/Users/ethan/Documents/School/SEM 8/DAGV 1200/dagv-1200/Maya//assets/Table.ma";
@@ -30,18 +30,18 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B6A5AF09-4073-9CCD-FDF8-45AB631D24C3";
+fileInfo "UUID" "F2F18990-4DA0-7B0C-2046-17990429CF87";
 createNode transform -s -n "persp";
 	rename -uid "9A701767-448A-54B4-8644-79B28AFC19C9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.808383116913202 19.082105862631423 -30.468978334318141 ;
-	setAttr ".r" -type "double3" -19.200000000006746 -3095.5999999997539 0 ;
+	setAttr ".t" -type "double3" 24.716126459608713 20.101014969994395 -28.62338870998715 ;
+	setAttr ".r" -type "double3" -20.400000000002294 -3100.7999999996205 0 ;
 	setAttr ".rpt" -type "double3" 5.5912053570484919e-18 -4.7301233600043445e-17 -4.1625742251792774e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2307E926-4693-C02B-B27A-F8B250E3C02E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 39.806556622096949;
+	setAttr ".coi" 40.479315568459377;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -565,9 +565,9 @@ createNode mesh -n "WallShape2" -p "Wall2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "85ABA48C-4293-3B2B-5B1C-6CB62A9F6A86";
-	setAttr -s 4 ".lnk";
-	setAttr -s 4 ".slnk";
+	rename -uid "096A4CCB-47E5-9D43-AEE0-4FB23A1CD100";
+	setAttr -s 3 ".lnk";
+	setAttr -s 3 ".slnk";
 createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
 	rename -uid "B18D7EA5-4D7B-455D-EF2E-EEA9791A4BF5";
 	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
@@ -575,11 +575,11 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F00D1DC8-4785-9BDF-FEF4-52B24432B1CE";
+	rename -uid "659A97C1-4A68-0B65-505A-B4ABC6FA2E22";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0113F0EA-4BF4-EAC5-E137-FB82656A35D5";
+	rename -uid "D93BC8D7-40A7-4CE0-F9C5-18BBCE554795";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A2E3D510-4C48-1C1E-4FC9-12BD2986EB88";
+	rename -uid "588AD0A2-4DF7-7A6F-67F6-0397BEAC29B4";
 	setAttr ".cdl" 2;
 	setAttr -s 4 ".dli[1:3]"  1 0 2;
 	setAttr -s 3 ".dli";
@@ -587,7 +587,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "1274EBD6-4D09-6189-53D4-DC92304821AF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "493AFD90-45AE-22CF-E1B0-94B94D2BC205";
+	rename -uid "D72E8465-4CC8-647F-4E36-79A7F859614F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B2999D43-4D64-25B8-B219-85936DC831C1";
 	setAttr ".g" yes;
@@ -728,8 +728,8 @@ createNode reference -n "Unit5_LabSceneRN";
 	rename -uid "EB934588-4A8A-5265-AD14-0DA790BEFB20";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Unit5_LabSceneRN"
-		"Unit5_LabScene:CusionRN" 0
 		"Unit5_LabSceneRN" 0
+		"Unit5_LabScene:CusionRN" 0
 		"Unit5_LabSceneRN" 7
 		2 "|Unit5_LabScene:SofaBase" "translate" " -type \"double3\" 2.2029588102714488 0 8.26723468099678449"
 		
